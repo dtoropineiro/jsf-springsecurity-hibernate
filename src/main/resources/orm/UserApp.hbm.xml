@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="licodipo.model.UserApp" table="users">
+        <id name="userName" type="string">
+            <column name="user_name" length="50" />
+            <generator class="assigned" />
+        </id>
+        <property name="password" type="string">
+            <column name="user_password" length="60" not-null="true" />
+        </property>
+        <property name="enabled" type="boolean">
+            <column name="enabled" not-null="true" />
+        </property>
+
+        <set name="userRole" table="user_roles" inverse="true" lazy="false" fetch="select">
+            <key>
+                <column name="user_name" length="50" not-null="true" />
+            </key>
+            <one-to-many class="licodipo.model.UserRole" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="licodipo.model.UserRole" table="user_roles">
+        <id name="userRoleId" type="int">
+            <column name="user_role_id" />
+            <generator class="sequence"> 
+        	<param name="sequence">sq_roles</param>
+        	</generator> 
+        </id>
+      
+        <many-to-one name="user" class="licodipo.model.UserApp" fetch="select">
+            <column name="user_name" length="50" not-null="true" />
+        </many-to-one>
+        <property name="userName" type="string" insert="false" update="false">
+            <column name="user_name" length="50"/>
+        </property>
+        <property name="role" type="string">
+            <column name="role" length="50"/>
+        </property>
+    </class>
+</hibernate-mapping>

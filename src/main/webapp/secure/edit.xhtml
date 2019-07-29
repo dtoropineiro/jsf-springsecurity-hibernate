@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      >
+    <h:head>
+    	<h:outputStylesheet library="css" name="table-style.css"  />
+    	<h:outputStylesheet library="css" name="bootstrap.min.css"  />
+    
+
+</h:head>
+    <h:body>
+ 		<div class="navbar navbar-expand-lg navbar-dark bg-dark">
+ 			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+	            <ul class="navbar-nav mr-auto">
+	                <li class="nav-item active">
+	                    <a class="nav-link" href="/licodipo/secure/default.xhtml">Home</a>
+	                </li>
+	                <li class="nav-item">
+	                    <a class="nav-link" href="create.xhtml?faces-redirect=true">Create</a>
+	                </li>
+	                </ul>
+		                <h:form>
+		               <p:menuButton value="Settings">
+					        <p:menuitem value="Add new Admin" url="register.xhtml" icon="pi pi-save"/>
+					        <p:separator />
+					        <p:menuitem value="Logout" action="#{loginMgmtBean.logout}" icon="pi pi-home"/>
+					    </p:menuButton>
+				    </h:form>
+        	</div>
+ 		</div>
+    	<h1>Edit Car Part</h1>
+ 
+ 	
+ 		
+ 		<h:form class="form-horizontal">
+ 			<h2> 
+ 				<h:outputFormat value="">
+ 				
+	 				<f:param value="#{c.id}" />
+     			</h:outputFormat>
+     		</h2>
+ 			<h:panelGrid columns="3">
+			
+				<h:outputLabel for="name" class="control-label col-sm-2">Name:</h:outputLabel> 
+				<h:inputText id="name" value="#{editPartObj.name}" class="form-control"
+					 required="true" requiredMessage="Please enter Name">
+				</h:inputText>
+				<h:message for="name" style="color:red" />
+				
+				<h:outputLabel for="description" class="control-label col-sm-2">Description:</h:outputLabel> 
+				<h:inputText id="description" value="#{editPartObj.description}" class="form-control"
+					 required="true" requiredMessage="Please enter Description">
+				</h:inputText>
+				<h:message for="description" style="color:red" />
+				
+				<h:outputLabel for="make" class="control-label col-sm-2">Make:</h:outputLabel>  
+				<h:inputText id="make" value="#{editPartObj.make}" class="form-control"
+					required="true" requiredMessage="Please enter Make">
+				</h:inputText>
+				<h:message for="make" style="color:red" />
+				
+				<h:outputLabel for="model" class="control-label col-sm-2">Model:</h:outputLabel> 
+				<h:inputText id="model" value="#{editPartObj.model}" class="form-control"
+					required="true" requiredMessage="Please enter Model">
+				</h:inputText>
+				<h:message for="model" style="color:red" />
+				
+				<h:outputLabel for="price" class="control-label col-sm-2">Price:</h:outputLabel> 
+				<h:inputText id="price" type="number" value="#{editPartObj.price}" class="form-control"
+					required="true" requiredMessage="Please enter Price">
+				</h:inputText>
+				<h:message for="price" style="color:red" />
+				
+				<h:outputLabel for="stock" type="number" class="control-label col-sm-2">Stock:</h:outputLabel> 
+				<h:inputText id="stock" type="number" value="#{editPartObj.stock}" class="form-control"
+					required="true" requiredMessage="Please enter Stock">
+				</h:inputText>
+				<h:message for="stock" style="color:red" />
+			</h:panelGrid>
+			
+			<h:commandButton value="Submit" action="#{carPart.editCarPart(editPartObj)}" class="btn btn-success"/>
+
+ 		</h:form>
+ 		
+    </h:body>
+ 
+</html>

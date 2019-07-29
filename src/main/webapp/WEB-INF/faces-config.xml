@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+    http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd"
+    version="2.0">
+ 
+	<application>
+    	<el-resolver>
+    		org.springframework.web.jsf.el.SpringBeanFacesELResolver
+    	</el-resolver>
+  	</application>
+  	
+  	<navigation-rule>
+		<from-view-id>/secure/default.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>edit</from-outcome>
+			<to-view-id>secure/edit.xhtml</to-view-id>
+			<redirect />
+		</navigation-case>
+		<navigation-case>
+              <from-action>#{loginMgmtBean.logout}</from-action>
+              <from-outcome>loggedout</from-outcome>
+              <to-view-id>/login.xhtml</to-view-id>
+              <redirect></redirect>
+        </navigation-case>
+<!--         <navigation-case> -->
+<!--               <from-action>#{carPart.toSearch}</from-action> -->
+<!--               <from-outcome>search</from-outcome> -->
+<!--               <to-view-id>secure/search.xhtml</to-view-id> -->
+<!--               <redirect></redirect> -->
+<!--         </navigation-case> -->
+	</navigation-rule>
+	
+	<navigation-rule>
+		<from-view-id>/secure/create.xhtml</from-view-id>
+
+		<navigation-case>
+              <from-action>#{loginMgmtBean.logout}</from-action>
+              <from-outcome>loggedout</from-outcome>
+              <to-view-id>/login.xhtml</to-view-id>
+              <redirect></redirect>
+        </navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<from-view-id>/secure/edit.xhtml</from-view-id>
+
+		<navigation-case>
+              <from-action>#{loginMgmtBean.logout}</from-action>
+              <from-outcome>loggedout</from-outcome>
+              <to-view-id>/login.xhtml</to-view-id>
+              <redirect></redirect>
+        </navigation-case>
+	</navigation-rule>
+	
+	
+  	 <navigation-rule>
+        <from-view-id>/login.xhtml</from-view-id>
+        <navigation-case>
+            <from-action>#{loginMgmtBean.login}</from-action>
+            <from-outcome>correct</from-outcome>
+            <to-view-id>/secure/default.xhtml</to-view-id>
+              <redirect/>
+        </navigation-case>
+             <navigation-case>
+            <from-action>#{loginMgmtBean.login}</from-action>
+            <from-outcome>incorrect</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+              <redirect/>
+        </navigation-case> 
+    </navigation-rule>
+	
+	<navigation-rule>
+	    <from-view-id>/secure/register.xhtml</from-view-id> 
+	    <navigation-case>
+	    <from-action>#{userMB.addUser}</from-action>
+	        <from-outcome>success</from-outcome>
+            <to-view-id>/login.xhtml</to-view-id>
+              <redirect/>
+        </navigation-case>
+   
+    </navigation-rule>
+	
+	<managed-bean>
+		<managed-bean-name>carPart</managed-bean-name>
+		<managed-bean-class>licodipo.bean.CarPartBean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+			<property-name>carPartController</property-name>
+			<value>#{carPartController}</value>
+		</managed-property>
+	</managed-bean>
+	
+	<managed-bean>
+		<managed-bean-name>loginMgmtBean</managed-bean-name>
+		<managed-bean-class>licodipo.bean.LoginBean</managed-bean-class>
+		<managed-bean-scope>request</managed-bean-scope>
+		<managed-property>
+			<property-name>authenticationManager</property-name>
+			<value>#{authenticationManager}</value>
+		</managed-property>
+	</managed-bean>
+
+	
+	<managed-bean>
+		<managed-bean-name>user</managed-bean-name>
+		<managed-bean-class>licodipo.bean.UserBean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+			<property-name>userController</property-name>
+			<value>#{userController}</value>
+		</managed-property>
+	</managed-bean>
+	
+	<managed-bean>
+		<managed-bean-name>userRole</managed-bean-name>
+		<managed-bean-class>licodipo.bean.UserRoleBean</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+			<property-name>customUserDetailService</property-name>
+			<value>#{customUserDetailService}</value>
+		</managed-property>
+	</managed-bean>
+ 
+</faces-config>
