@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="0ec415ad-0319-4726-9ff9-c441d78fc28d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
+=======
+    <list default="true" id="0ec415ad-0319-4726-9ff9-c441d78fc28d" name="Default Changelist" comment="" />
+>>>>>>> dev
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,7 +25,11 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/licodipo/bean/CaptchaView.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="136">
+<<<<<<< HEAD
               <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+=======
+              <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+>>>>>>> dev
             </state>
           </provider>
         </entry>
@@ -327,8 +335,16 @@
       <option name="presentableId" value="Default" />
       <updated>1563766118385</updated>
       <workItem from="1563766124878" duration="4375000" />
-      <workItem from="1564067614192" duration="1679000" />
+      <workItem from="1564067614192" duration="2781000" />
     </task>
+    <task id="LOCAL-00001" summary="uno">
+      <created>1564367206764</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1564367206764</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -337,7 +353,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
+<<<<<<< HEAD
     <option name="totallyTimeSpent" value="6090000" />
+=======
+    <option name="totallyTimeSpent" value="7889000" />
+>>>>>>> dev
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -350,20 +370,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.74050635" visible="true" weight="0.25302014" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7407932" visible="true" weight="0.25302014" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
-      <window_info id="Web" order="7" sideWeight="0.25949368" side_tool="true" visible="true" weight="0.25302014" />
+      <window_info id="Web" order="7" sideWeight="0.2592068" side_tool="true" visible="true" weight="0.25302014" />
       <window_info anchor="bottom" id="Application Servers" weight="0.3286119" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -393,11 +412,19 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="uno" />
+    <option name="LAST_COMMIT_MESSAGE" value="uno" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/licodipo/bean/CaptchaView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
+<<<<<<< HEAD
           <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+=======
+          <caret line="9" column="21" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
+>>>>>>> dev
         </state>
       </provider>
     </entry>
